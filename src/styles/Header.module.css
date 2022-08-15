@@ -1,24 +1,24 @@
 .headerTop {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 19.24px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 19.24px;
 }
 
 .img {
-    width: 64.08px;
-    height: 60.76px;
-    flex: none;
-    margin-right: 15.99px;
+  width: 64.08px;
+  height: 60.76px;
+  flex: none;
+  margin-right: 15.99px;
 }
 
-.text{
-    width: 128px;
-    height: 41px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 9.88px 0px 9.88px 0px;
-    flex: none;
+.text {
+  width: 128px;
+  height: 41px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 9.88px 0px 9.88px 0px;
+  flex: none;
 }
