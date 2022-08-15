@@ -14,6 +14,11 @@
 
     --red: #f75a68
   }
+
+  :focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--green);
+  }
    
 * {
     margin: 0;
