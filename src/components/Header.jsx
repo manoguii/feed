@@ -10,9 +10,6 @@ export function Header() {
           <div className={style.img}>
             <img src={iconIgnite} />
           </div>
-          <div className={style.text}>
-            <p>Ignite Feed</p>
-          </div>
         </div>
       </header>
     </>

@@ -2,23 +2,16 @@
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin-top: 20px;
-  margin-bottom: 19.24px;
+  background: var(--gray-2);
+  padding: 0.75rem 0;
+}
+ 
+.headerTop img {
+  height: 2rem;
 }
 
 .img {
-  width: 64.08px;
-  height: 60.76px;
-  flex: none;
-  margin-right: 15.99px;
-}
-
-.text {
-  width: 128px;
-  height: 41px;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin: 9.88px 0px 9.88px 0px;
-  flex: none;
 }
