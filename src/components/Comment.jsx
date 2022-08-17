@@ -2,7 +2,7 @@ import { ThumbsUp, Trash } from 'phosphor-react'
 import styles from '../styles/Comment.module.css'
 import { Avatar } from './Avatar'
 
-export function Comment() {
+export function Comment(props) {
   return (
     <div className={styles.comment}>
 
@@ -27,7 +27,7 @@ export function Comment() {
 
           </header>
 
-          <p>Muito bom Devon, Parabens</p>
+          <p>{props.content}</p>
 
         </div>
 
