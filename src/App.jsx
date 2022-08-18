@@ -66,12 +66,9 @@ const posts = [
 export function App() {
   return (
     <>
-
       <Header />
-
       <div className={styles.wrapper}>
         <Sidebar />
-
         <main>
           {posts.map(posts => {
             return (
