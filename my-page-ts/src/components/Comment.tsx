@@ -3,7 +3,12 @@ import { useState } from 'react'
 import styles from '../styles/Comment.module.css'
 import { Avatar } from './Avatar'
 
-export function Comment(props) {
+interface CommentsProps {
+  content: string,
+  onDeleteComment: (Comment: string) => void
+}
+
+export function Comment(props: CommentsProps) {
 
   const [addLikePost, setAddLikePost] = useState(0)
 

@@ -2,13 +2,28 @@ import styles from "../styles/Post.module.css";
 import ptBR from 'date-fns/locale/pt-BR'
 
 import { format, formatDistanceToNow } from 'date-fns'
-import { useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 import { PaintBrushBroad } from "phosphor-react";
 import { pt } from "date-fns/locale";
 
-export function Post(props) {
+interface Content {
+  type: string,
+  content: string
+}
+
+interface PostProps {
+  author: {
+    name: string,
+    role: string,
+    avatarUrl: string
+  },
+  publishedAt: Date,
+  content: Content[]
+}
+
+export function Post(props: PostProps) {
 
   const [newCommentText, setNewCommentText] = useState('')
   const [comments, setComments] = useState(['Bom dia']);
@@ -21,23 +36,25 @@ export function Post(props) {
     addSuffix: true,
   })
 
-  function handleNewCommentChange() {
+  function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
     setNewCommentText(event.target.value)
   }
 
-  function handleCreateNewComment() {
+  function handleCreateNewComment(event: FormEvent) {
     event.preventDefault()
     setComments([...comments, newCommentText])
     setNewCommentText('')
   }
 
-  function onDeleteComment(comentToDelete) {
+  function onDeleteComment(comentToDelete: string) {
     const createNewListComment = comments.filter(coment => {
       return coment !== comentToDelete;
     })
     setComments(createNewListComment)
   }
+
   const buttonDisable = newCommentText.length === 0
+
   return (
     <article className={styles.post}>
       <header>
@@ -56,8 +73,6 @@ export function Post(props) {
           if (line.type === 'paragraph') {
             return (<p key={line.content}>{line.content}</p>)
           } else if (line.type === 'link') {
-            return (<p key={line.content}><a href="#">{line.content}</a></p>)
-          } else {
             return (<p key={line.content}><a href="#">{line.content}</a></p>)
           }
         })}

@@ -27,10 +27,6 @@ const posts = [
         type: 'link',
         content: '👉jane.design/doctorcare',
       },
-      {
-        type: 'link-hashTag',
-        content: ['#novoprojeto', '#ReactJS', '#nlw'],
-      },
     ],
     publishedAt: new Date('2022-08-03 20:00:00'),
   },
@@ -53,10 +49,6 @@ const posts = [
       {
         type: 'link',
         content: '👉jane.design/doctorcare',
-      },
-      {
-        type: 'link-hashTag',
-        content: ['#novoprojeto', '#ReactJS', '#nlw'],
       },
     ],
     publishedAt: new Date('2022-08-10 20:30:00'),
